@@ -146,6 +146,7 @@ body {
   -o-animation: 20s slider infinite ;
   animation: 20s slider infinite ;
 }
+
 .slider figure .inset {
   width: 20%;
   height: inherit;
@@ -169,11 +170,11 @@ body {
   padding: .3em .5em .3em .5em;
   border-top-right-radius: 50px;
 
-  -webkit-animation: 20s message-appear-left infinite;
+  -webkit-animation: 20s message-appear-left infinite; 
   -moz-animation: 20s message-appear-left infinite;
   -ms-animation: 20s message-appear-left infinite;
   -o-animation: 20s message-appear-left infinite;
-  animation: 20s message-appear-left infinite;
+  animation: 20s message-appear-left infinite; 
 }
 .right {
   background: #009999;
@@ -255,6 +256,7 @@ body {
   .right {
     margin-left: 10%;
     width: 8.3%;
+  }
 }
  
 @media screen and (max-width: 900px) {
@@ -337,6 +339,19 @@ body {
   100% { margin-left: -400%; }
 }
 
+@-moz-keyframes slider {
+  0%   { margin-left:    0%; }
+  16%  { margin-left:    0%; }
+  21%  { margin-left: -100%; }
+  37%  { margin-left: -100%; }
+  42%  { margin-left: -200%; }
+  58%  { margin-left: -200%; }
+  63%  { margin-left: -300%; }
+  79%  { margin-left: -300%; }
+  84%  { margin-left: -400%; }
+  100% { margin-left: -400%; }
+}
+
 @keyframes message-appear-left {
   0%, 21%, 42%, 63%, 84% { margin-left: 20%; opacity: 0;}
   3%, 20.9999%, 24%, 41.999%, 45%, 62.999%, 66%, 83.999%, 87%, 99.999%{ margin-left: 0; opacity: 1;}
@@ -346,4 +361,4 @@ body {
   0%, 21%, 42%, 63%, 84% { margin-left: 0%; opacity: 0; }
   3%, 24%, 45%, 66%, 87% { margin-left: 0%; opacity: 0; }
   20.999%,  41.999%,  62.999%,  83.999%, 99.999% { margin-left: 12%; opacity: 1;}
-} 
+}
