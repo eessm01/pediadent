@@ -250,8 +250,11 @@ body {
     padding-left: .3em;
   }
   .message {
-    font-size: 1em;
+    font-size: 1.5em;
   }
+  .right {
+    margin-left: 10%;
+    width: 8.3%;
 }
  
 @media screen and (max-width: 900px) {
@@ -263,7 +266,7 @@ body {
     visibility: hidden;
   }
   .message {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 } 
 
@@ -275,9 +278,9 @@ body {
   .map iframe {
     width: 80%;
   }
-  .message {
-    font-size: .7em;
-  }
+  /* .message {
+    font-size: 1em;
+  } */
 }
 
 
@@ -288,9 +291,9 @@ body {
   .map iframe {
     width: 100%;
   }
-  .message {
-    font-size: .6em;
-  }
+  /* .message {
+    font-size: .8em;
+  } */
 }
 
 
