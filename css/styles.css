@@ -382,6 +382,9 @@ body {
   body {
     font-size: 11px;
   }
+  .header {
+    height: 70px;
+  }
   .map iframe {
     width: 100%;
   }
