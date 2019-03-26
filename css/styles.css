@@ -418,13 +418,10 @@ body {
     height: 70px;
   }
   .one {
-    left: calc(50% - 20px);
-    animation: lighti 2s infinite;
+    left: calc(50% - 10px);
   }
   .two {
-    top: calc(50% + 10px);
-    left: calc(50% + 25px);
-    animation: lighti 2s infinite 1s;
+    left: calc(50% + 20px);
   } 
   .map iframe {
     width: 100%;
