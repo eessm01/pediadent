@@ -100,20 +100,13 @@ body {
 
 
 .wrapper {
-  /* border: 1px solid blue; */
   position: relative;
   width: 100%;
   height: 100vh;
-  /* display: grid;
-  grid-template-columns:  100%;
-  grid-template-rows: 100vh ;
-  grid-template-areas: "content"; */
 }
 .content {
-  /* grid-area: content; */
   border: 1px solid black;
   width: inherit;
-  /* height: 100vh; */
 }
 .section-slider {
   width: inherit;
@@ -202,13 +195,11 @@ body {
   padding: 5px;
   width: 100%;
   height: auto;
-  /* position: relative; */
   font-size: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 .treatments-title h1 {
   padding: 0;
@@ -397,6 +388,12 @@ body {
   }
   .treatments-content {
     grid-template: 100% / 20% 1fr;
+    padding-left: 2em;
+    padding-right: 2em;
+  } 
+  .treatments-title {
+    justify-content: flex-start;
+    padding-top: 7em;
   }
   .treatment-box .box {
     width: 200px;
@@ -410,6 +407,14 @@ body {
     font-size: 11px;
   }
   .header {
+    height: 70px;
+  }
+  .treatments-content {
+    padding-left: 1em;
+    padding-right: 1em;
+  } 
+  .tooth-washing {
+    width: 70px;
     height: 70px;
   }
   .map iframe {
