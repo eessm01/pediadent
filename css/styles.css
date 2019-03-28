@@ -2,6 +2,7 @@
 #ff0000 rojo
 #ff7400 naranja
 #009999 verde
+#81e264 otro verde
 #00cc00 verde limón */
 
 body {
@@ -144,7 +145,6 @@ body {
   width: 8%;
   font-size: 3em;
   color: white;
-  /* opacity: 0; */
 }
 .left {
   background: #ff7400;
@@ -179,11 +179,12 @@ body {
 .treatments {
   height: 100vh;
   background: #81e264;
+  display: flex;
+  align-items: center;
 }
 .treatments-content, .contact-content {
   margin: 0;
   padding: 0;
-  padding-top: 10%;
   padding-left: 5em;
   padding-right: 5em;
   display: grid;
@@ -203,7 +204,6 @@ body {
 }
 .treatments-title h1 {
   padding: 0;
-  /* padding-bottom: 50px; */
 }
 .tooth-washing {
   position: relative;
@@ -237,22 +237,23 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
+  align-content: space-around;
+  height: 70vh;
+  position: relative;
 }
 .treatment-box .box {
   max-width: 600px;
-  min-width: 200px;
   width: 30%;
-  height: auto;
-  min-width: 150px;
-  /* background: #e6ad63; */
-  background-image: linear-gradient(to right, #e6ad63, #e6ad63,#e6ad63, #81e264 );
-  border-radius: 30px;
-  margin: 10px;
+  height: 50%;
+  border: 3px solid #e6ad63;
   padding: 5px;
   display: flex;
   flex-direction: row;
 }
+.treatment-box .box:nth-child(2n) { 
+  background: #e6ad63;
+}
+
 .treatment-box .box .box-left, 
 .treatment-box .box .box-right {
   margin: 0;
@@ -263,10 +264,10 @@ body {
   font-size: 2em;
 }
 .treatment-box .box .box-left {
-  width: 30%;
+  width: 20%;
 }
 .treatment-box .box .box-left img {
-  width: 60%;
+  width: 100%;
 }
 .treatment-box .box .box-right {
   width: 70%;
@@ -275,6 +276,14 @@ body {
 .specialist {
   height: 100vh;
   background: #f3dd5f;
+  display: flex;
+  align-items: center;
+}
+.specialist-content {
+  background: #ff0000;
+  opacity: .7;
+  width: 100%;
+  height: 70%;
 }
 .contact {
   height: 100vh;
@@ -353,9 +362,13 @@ body {
   .message {
     font-size: 2em;
   }
+  .left {
+    border-top-right-radius: 25px;
+  }
   .right {
     margin-left: 10%;
     width: 8.3%;
+    border-top-left-radius: 25px;
   }
 }
 
@@ -371,7 +384,19 @@ body {
     visibility: hidden;
   }
   .treatments {
-    height: 100%;
+    position: relative;
+  }
+  .treatment-box {
+    height: 80%;
+  }
+  .treatment-box .box {
+    min-width: 250px;
+  }
+  .treatment-box .box:nth-child(3) { 
+    background: #e6ad63;
+  }
+  .treatment-box .box:nth-child(4) { 
+    background: #81e264;
   }
 } 
 
@@ -383,21 +408,45 @@ body {
     width: 100%;
     height: auto;
   }
-  .map iframe {
-    width: 80%;
+  .left {
+    border-top-right-radius: 15px;
+  }
+  .right {
+    border-top-left-radius: 15px;
   }
   .treatments-content {
-    grid-template: 100% / 20% 1fr;
-    padding-left: 2em;
-    padding-right: 2em;
+    grid-template: 100% / 15% 1fr;
+    padding-left: .5em;
+    padding-right: .5em;
   } 
   .treatments-title {
     justify-content: flex-start;
     padding-top: 7em;
+    font-size: 1.3em;
+  }
+  .treatment-box {
+    height: auto;
+  }
+  .treatment-box .box .box-right {
+    width: 80%;
+    padding: 2px;
+  }
+  .treatment-box .box .box-right p {
+    padding: 2px;
+    margin: 0;
   }
   .treatment-box .box {
-    width: 200px;
-    max-height: 180px;
+    max-height: 300px;
+    min-width: 380px;
+  }
+  .treatment-box .box:nth-child(2n) { 
+    background: #e6ad63;
+  }
+  .treatment-box .box:nth-child(2n+1) { 
+    background: #81e264;
+  }
+  .map iframe {
+    width: 80%;
   }
 }
 
@@ -410,12 +459,22 @@ body {
     height: 70px;
   }
   .treatments-content {
+    grid-template: 100% / 20% 1fr;
     padding-left: 1em;
     padding-right: 1em;
   } 
   .tooth-washing {
     width: 70px;
     height: 70px;
+  }
+  .treatment-box .box {
+    max-width: 300px;
+    min-width: 250px;
+    /* max-height: 110px; */
+    /* max-width: 180px; */
+    /* padding: 5px;
+    display: flex;
+    flex-direction: row; */
   }
   .one {
     left: calc(50% - 10px);
