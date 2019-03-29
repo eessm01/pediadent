@@ -190,6 +190,7 @@ body {
   padding-right: 5em;
   display: grid;
   grid-template: 100% / 12% 1fr;
+  color: white;
 }
 .treatments-title, .contact-title {
   background: #e6ad63;
@@ -274,17 +275,58 @@ body {
   width: 70%;
 }
 
+/* 3. sección de especialista */
 .specialist {
   height: 100vh;
   background: #f3dd5f;
   display: flex;
   align-items: center;
+  color: white;
 }
-.specialist-content {
-  background: #ff0000;
-  opacity: .7;
+.specialist-wrapper {
   width: 100%;
-  height: 70%;
+  height: 80%;
+  display: grid;
+  grid-template: 100% / 60% 40%;
+}
+.specialist-description, .specialist-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.specialist-description .wrapper{
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  right: -12%;
+  background: rgba(255,0,0,.1);
+}
+.specialist-image .wrapper{
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  background: rgba(0,0,255,.2);
+}
+.specialist-description .wrapper .title {
+  font-size: 2.5em;
+  padding: 0 1em;
+}
+.specialist-description .wrapper .degrees {
+  font-size: 1.8em;
+  padding: .5em 1.5em;
+}
+.specialist-image .wrapper .name { 
+  font-size: 1.8em;
+  padding: 1em;
+}
+.specialist-image .wrapper .image { 
+  border: 1px solid red;
+  width: 50%;
+  height: 50%;
+}
+.specialist-image .wrapper .image img { 
+  width: 50%;
+  border: 1px solid blue;
 }
 .contact {
   height: 100vh;
@@ -480,6 +522,33 @@ body {
   } 
   .map iframe {
     width: 100%;
+  }
+  .specialist-wrapper {
+    grid-template: 20% 80%/ 100%;
+  }
+  .specialist-description { 
+    grid-row: 2;
+  }
+  .specialist-image { 
+    grid-row: 1;
+  }
+  .specialist-description .wrapper, 
+  .specialist-image .wrapper {
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .specialist-description .wrapper { 
+    width: 80%;
+    top: -5%;
+  }
+  .specialist-image .wrapper { 
+    width: 50%;
+    bottom: -6%;
   }
 } 
 
