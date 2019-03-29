@@ -181,6 +181,7 @@ body {
   background: #81e264;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .treatments-content, .contact-content {
   margin: 0;
@@ -384,7 +385,7 @@ body {
     visibility: hidden;
   }
   .treatments {
-    position: relative;
+    min-height: 750px;
   }
   .treatment-box {
     height: 80%;
@@ -470,11 +471,6 @@ body {
   .treatment-box .box {
     max-width: 300px;
     min-width: 250px;
-    /* max-height: 110px; */
-    /* max-width: 180px; */
-    /* padding: 5px;
-    display: flex;
-    flex-direction: row; */
   }
   .one {
     left: calc(50% - 10px);
@@ -487,6 +483,22 @@ body {
   }
 } 
 
+@media screen and (max-width: 400px) {
+  .treatment-box .box {
+    max-width: 250px;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .treatment-box .box {
+    max-width: 200px;
+    min-width: 180px;
+  }
+  .treatments-title {
+    font-size: 1.1em;
+  }
+}
 
 /*animaciones*/
 @keyframes slider {
