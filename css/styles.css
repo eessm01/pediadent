@@ -1,8 +1,8 @@
-/* colores
+/* colores en el sitio web 
 #ff0000 rojo
 #ff7400 naranja
 #009999 verde
-#81e264 otro verde
+#81e264 verde claro
 #00cc00 verde limón */
 
 body {
@@ -13,8 +13,9 @@ body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 16px;
 }
-/* Contiene logo, menu e información breve de contacto */
-/* bloque fijo durante toda la página */
+
+/* Contiene logo, menu e información breve de contacto 
+ * bloque fijo durante toda la página */
 .header {
   background: rgba(255, 255, 255, .5);
   position: fixed;
@@ -70,7 +71,7 @@ body {
 .header-menu ul li:hover a{ 
   color: #009999;
 }
-/* información breve de contacto */
+/* teléfono y dirección */
 .header-right {
   grid-column: 3;
   display: grid;
@@ -99,16 +100,13 @@ body {
 }
 
 
-
+/* Este bloque contiene todas las secciones del sitio web */
 .wrapper {
   position: relative;
   width: 100%;
   height: 100vh;
 }
-.content {
-  border: 1px solid black;
-  width: inherit;
-}
+/* slider */
 .section-slider {
   width: inherit;
 }
@@ -118,7 +116,8 @@ body {
 }
 .slider figure {
   position: relative;
-  width: 500%;
+  /* porque se trata de un slider de 5 imágenes */
+  width: 500%;    
   margin: 0;
   left: 0;
   height: inherit;
@@ -131,15 +130,17 @@ body {
 }
 
 .slider figure .inset {
-  width: 20%;
+  /* dimensión de cada imágen 5*20=100% */
+  width: 20%;   
   height: inherit;
   float: left; 
 }
 .slider figure img {
   width: 100%;
   height: inherit;
-  object-fit: cover;    /*   Evita que la imagen se deforme */
+  object-fit: cover;    /*   Evita que la imagen se deforme en diferentes resoluciones */
 }
+/* información del slider, textos por encima de las imágenes */
 .message {
   position: absolute;
   width: 8%;
@@ -176,6 +177,7 @@ body {
 }
 
 
+/* 2. Sección de tratamientos */
 .treatments {
   height: 100vh;
   background: #81e264;
@@ -183,7 +185,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.treatments-content, .contact-content {
+.treatments-content {
   margin: 0;
   padding: 0;
   padding-left: 5em;
@@ -192,7 +194,7 @@ body {
   grid-template: 100% / 12% 1fr;
   color: white;
 }
-.treatments-title, .contact-title {
+.treatments-title {
   background: #e6ad63;
   border-radius: 30px;
   padding: 5px;
@@ -207,6 +209,7 @@ body {
 .treatments-title h1 {
   padding: 0;
 }
+/* envoltura de la animación (diente lavándose) */
 .tooth-washing {
   position: relative;
   width: 100px;
@@ -219,6 +222,7 @@ body {
 .treatments-title .toothbrush {
   animation: 2s toothbrush infinite alternate;
 }
+/* brillo en el diente */
 .lighti {
   width: 2px;
   height: 2px;
@@ -235,6 +239,7 @@ body {
   left: calc(50% + 35px);
   animation: lighti 2s infinite 1s;
 } 
+/* cajas de contenido de Tratamientos */
 .treatment-box {
   display: flex;
   flex-wrap: wrap;
@@ -255,7 +260,6 @@ body {
 .treatment-box .box:nth-child(2n) { 
   background: #e6ad63;
 }
-
 .treatment-box .box .box-left, 
 .treatment-box .box .box-right {
   margin: 0;
@@ -270,12 +274,15 @@ body {
 }
 .treatment-box .box .box-left img {
   width: 100%;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px 3px rgb(62, 150, 233);
 }
 .treatment-box .box .box-right {
   width: 70%;
 }
 
-/* 3. sección de especialista */
+
+/* 3. sección de Especialista */
 .specialist {
   height: 100vh;
   background: #f3dd5f;
@@ -291,12 +298,13 @@ body {
   grid-template: 5% 10% 20% 60% 5% / 5% 50% 5% 5% 35%;
 }
 .specialist-wrapper .title {
-  background: rgba(241, 50, 16, 0.2);
+  background: rgba(228,172,105, 0.7); 
   grid-column: 1/3;
   grid-row: 2/4;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  box-shadow: 0 8px 6px -6px rgb(241, 50, 16);
 }
 .specialist-wrapper .title .name {
   height: 63%;
@@ -309,12 +317,12 @@ body {
   margin: 0;
 }
 .specialist-wrapper .degrees {
-  background: rgba(15, 218, 15, 0.2);
+  background: rgba(15, 218, 15, 0.5);
   grid-column: 2/5;
   grid-row: 3/5;
   display: flex;
   align-items: flex-end;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 .specialist-wrapper .degrees .content {
   width: 70%;
@@ -323,7 +331,7 @@ body {
   padding: 1em 1.5em;
 }
 .specialist-wrapper .image {
-  background: rgba(0, 217, 255, 0.2);
+  background: rgba(0, 217, 255, 0.5);
   grid-column: 4/6;
   grid-row: 1/6;
   display: flex;
@@ -343,6 +351,7 @@ body {
   object-fit: cover; 
 }
 
+/* 4. Sección de contacto */
 .contact {
   height: 100vh;
   background: #eb9e3a;
