@@ -617,6 +617,14 @@ body {
     left: calc(50% + 15px);
     animation: lighti 2s infinite 1s;
   } 
+  .box .box-left {
+    padding: 0;
+    visibility: hidden;
+    height: 0;
+  }
+  .box .box-right {
+    height: 100%;
+  }
   .specialist-wrapper {
     grid-template: 2.5% 15% 2.5% 75% 5% / 5% 65% 20% 5% 5%;
   }
