@@ -567,7 +567,7 @@ body {
 }
 
 
-@media screen and (max-width: 520px),  screen and (max-height: 400px) {
+@media screen and (max-width: 520px),  screen and (max-height: 500px) {
   body {
     font-size: 11px;
   }
