@@ -314,7 +314,7 @@ body {
   grid-template: 5% 10% 20% 60% 5% / 5% 50% 5% 5% 35%;
 }
 .specialist-wrapper .title {
-  background: rgba(228,172,105, 0.7); 
+  background: #F87049;
   grid-column: 1/3;
   grid-row: 2/4;
   display: flex;
@@ -333,7 +333,7 @@ body {
   margin: 0;
 }
 .specialist-wrapper .degrees {
-  background: rgba(15, 218, 15, 0.5);
+  background: #19B88F;
   grid-column: 2/5;
   grid-row: 3/5;
   display: flex;
@@ -347,7 +347,7 @@ body {
   padding: 1em 1.5em;
 }
 .specialist-wrapper .image {
-  background: rgba(0, 217, 255, 0.5);
+  background: #008FFF;
   grid-column: 4/6;
   grid-row: 1/6;
   display: flex;
@@ -370,9 +370,49 @@ body {
 /* 4. Sección de contacto */
 .contact {
   height: 100vh;
+  margin: 0;
+  padding: 0;
   background: #eb9e3a;
 }
-
+.contact-content {
+  padding: 0;
+  padding-top: 70px;
+}
+.contact-wrapper {
+  display: grid;
+  padding: 0;
+  padding-top: 100px;
+  grid-template: 20% 80% / 30% 70%;
+  /* border: 1px solid red; */
+  color: white;
+}
+.title h1{
+  font-size: 2.5em;
+  padding: 1em;
+  grid-column: 1;
+  grid-row: 1; 
+}
+.information {
+  font-size: 2em;
+  padding: 1.5em;
+  grid-column: 1;
+  grid-row: 2; 
+}
+.google-map {
+  position: relative;
+  padding-bottom: 40%;
+  height: 0;
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 1/3;
+}
+.google-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95% !important;
+  height: 90% !important;
+}
 
 
 
@@ -507,6 +547,28 @@ body {
     height: 70%;
     width: auto;
   }
+  .contact-wrapper {
+    padding-top: 0px;
+    grid-template: 25px calc(100% - 50px) 25px/ 100vw;
+    /* border: 1px solid red; */
+    color: white;
+  }
+  .title h1{
+    font-size: 2em;
+    /* padding: 1em; */
+    border: 1px solid red;
+  }
+  .information {
+    font-size: 1.5em;
+    /* grid-column: 1; */
+    grid-row: 3/3; 
+    border: 1px solid red;
+  }
+  .google-map {
+    grid-column: 1;
+    grid-row: 2/2;
+    border: 1px solid red;
+  }
 } 
 
 @media screen and (max-width: 768px) {
@@ -561,9 +623,9 @@ body {
     padding: 0;
     padding-left: 1em;
   }
-  .map iframe {
+  /* .map iframe {
     width: 80%;
-  }
+  } */
 }
 
 
@@ -642,9 +704,9 @@ body {
     grid-column: 3/5;
     grid-row: 4/5;
   }
-  .map iframe {
+  /* .map iframe {
     width: 100%;
-  }
+  } */
 } 
 
 @media screen and (max-width: 400px) {
