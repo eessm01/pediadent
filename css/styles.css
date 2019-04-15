@@ -555,6 +555,7 @@ body {
   }
   .contact {
     height: auto;
+    min-height: 100vh;
   }
   .contact-wrapper {
     width: 90%;
