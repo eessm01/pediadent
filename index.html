@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
+    <!-- menu de hamburguesa -->
+    <i class="icon-menu burger-button" id="burger-button"></i>
     <!-- header -->
     <!-- Contiene logo, menu e información breve de contacto -->
     <div class="header">
@@ -21,10 +23,10 @@
         <div class="header-menu">
           <nav>
             <ul>
-              <li><a href="#section-slider">Inicio</a></li>
-              <li><a href="#treatments">Tratamientos</a></li>
-              <li><a href="#specialist">Especialista</a></li>
-              <li><a href="#contact">Contacto</a></li>
+              <li><a class="link" href="#section-slider">Inicio</a></li>
+              <li><a class="link" href="#treatments">Tratamientos</a></li>
+              <li><a class="link" href="#specialist">Especialista</a></li>
+              <li><a class="link" href="#contact">Contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -185,6 +187,47 @@
     <!--div class="footer"--> 
     
   </div>
-  <!-- <script src="scripts/pediadent.js"></script> -->
+  <script>
+      const ipad = window.matchMedia('screen and (max-width: 900px)')
+      const menu = document.querySelector('.header-menu')
+      const burgerButton = document.querySelector('#burger-button')
+      const links = document.querySelectorAll('.link')
+  
+      ipad.addListener(validation) //para que se ejecute requiere un cambio en la pantalla
+      
+      
+  
+      // valida que el media query sea el correcto para prender o no el listener
+      function validation(event) {
+        // console.log(event.matches)
+        if (event.matches) {   
+          burgerButton.addEventListener('click',hideShow)
+          // link.addEventListener('click',hideShow)
+          Array.from(links).forEach( link=> { 
+            link.addEventListener('click',hideShow)
+          })
+        }
+        else {
+          burgerButton.removeEventListener('click',hideShow)
+        }
+      }
+      
+      // para que funcione el menÃƒÂº de hamburguesa en la recarga
+      validation(ipad) //ipad regresa un true o false si se entra o no al media query
+      //para que escuche desde la recarga
+      // if (ipad.matches) {
+      //   burgerButton.addEventListener('click',hideShow)
+      // }
+  
+      //agrega o quita la clase para mostrar u ocultar el menu
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active')
+        }
+        else {
+          menu.classList.add('is-active')
+        }
+      }
+    </script>
 </body>
 </html>
