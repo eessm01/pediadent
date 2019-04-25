@@ -621,6 +621,13 @@ body {
   .header-menu ul {
     flex-direction: column;
   }
+  .header-menu ul li {
+    padding: 1em;
+  }
+  .header-menu ul li a {
+    padding: 0;
+    margin: 1em;
+  }
   .header-menu.is-active {
     left: 0;
   }
